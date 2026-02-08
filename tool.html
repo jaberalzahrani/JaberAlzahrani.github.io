@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Analysis Tool | J.S. Alzahrani</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { space:{900:'#0f172a',800:'#1e293b',700:'#334155'}, blueprint:{500:'#38bdf8',900:'#0c1220'} },
+          fontFamily:{ sans:['Inter','system-ui','sans-serif'], mono:['JetBrains Mono','monospace'] },
+          backgroundImage:{ 'grid-pattern':"linear-gradient(to right, #38bdf815 1px, transparent 1px), linear-gradient(to bottom, #38bdf815 1px, transparent 1px)" }
+        }
+      }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    body { font-family:'Inter', sans-serif; background-color:#0c1220; color:#e2e8f0; }
+    .font-mono { font-family:'JetBrains Mono', monospace; }
+    ::-webkit-scrollbar { width:8px; }
+    ::-webkit-scrollbar-track { background:#0f172a; }
+    ::-webkit-scrollbar-thumb { background:#334155; border-radius:4px; }
+    ::-webkit-scrollbar-thumb:hover { background:#475569; }
+  </style>
+</head>
+<body class="relative">
+  <!-- Nav -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-blueprint-900/90 backdrop-blur-md border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="index.html" class="flex items-center space-x-2 group">
+          <div class="p-1.5 rounded bg-sky-500/10 border border-sky-500/30">✈️</div>
+          <span class="font-mono font-bold text-lg tracking-tight text-white">J.S.Alzahrani<span class="text-sky-500">_</span></span>
+        </a>
+        <div class="hidden md:block">
+          <div class="ml-10 flex items-baseline space-x-8">
+            <a href="index.html" class="px-3 py-2 rounded-md text-sm font-medium text-slate-300 hover:text-white hover:bg-white/5">Home</a>
+            <a href="projects.html" class="px-3 py-2 rounded-md text-sm font-medium text-slate-300 hover:text-white hover:bg-white/5">Projects</a>
+            <a href="tool.html" class="px-3 py-2 rounded-md text-sm font-medium text-sky-400 bg-sky-900/20 border border-sky-500/20">Analysis Tool</a>
+            <a href="cv.html" class="px-3 py-2 rounded-md text-sm font-medium text-slate-300 hover:text-white hover:bg-white/5">CV</a>
+            <a href="contact.html" class="px-3 py-2 rounded-md text-sm font-medium text-slate-300 hover:text-white hover:bg-white/5">Contact</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="pt-24 pb-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+    <!-- Header -->
+    <div class="flex flex-col md:flex-row md:items-center justify-between mb-12 gap-6">
+      <div>
+        <h1 class="text-4xl font-bold text-white mb-2">Aircraft Conceptual Analysis Tool</h1>
+        <p class="text-slate-400 text-lg">A web-based suite for early-stage aircraft sizing and performance estimation.</p>
+      </div>
+      <div>
+        <a href="https://aero-concept-tool.base44.app/" target="_blank" class="inline-flex items-center px-6 py-3 bg-sky-600 hover:bg-sky-500 text-white font-medium rounded shadow-lg shadow-sky-900/20 transition-all">
+          Launch Live Demo
+        </a>
+      </div>
+    </div>
+
+    <!-- Main Grid -->
+    <div class="grid lg:grid-cols-3 gap-8">
+      <!-- Left Col: Modules & Screenshot -->
+      <div class="lg:col-span-2 space-y-8">
+        <section class="bg-slate-900/50 border border-slate-800 rounded-lg p-6 md:p-8">
+          <h2 class="text-xl font-bold text-white mb-6 flex items-center">
+            <span class="mr-2">📊</span> Core Functionalities
+          </h2>
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div class="p-4 rounded bg-slate-800/50 border border-slate-700/50">
+              <div class="text-sky-400 mb-3">📏</div>
+              <h3 class="font-semibold text-white mb-2">Sizing Estimation</h3>
+              <p class="text-sm text-slate-400 leading-relaxed">Early-stage weight estimation and component sizing for conceptual aircraft design.</p>
+            </div>
+            <div class="p-4 rounded bg-slate-800/50 border border-slate-700/50">
+              <div class="text-sky-400 mb-3">🏁</div>
+              <h3 class="font-semibold text-white mb-2">Performance Analysis</h3>
+              <p class="text-sm text-slate-400 leading-relaxed">Calculates key performance metrics including range, endurance, and takeoff distances.</p>
+            </div>
+            <div class="p-4 rounded bg-slate-800/50 border border-slate-700/50">
+              <div class="text-sky-400 mb-3">💨</div>
+              <h3 class="font-semibold text-white mb-2">Aerodynamics</h3>
+              <p class="text-sm text-slate-400 leading-relaxed">Estimates lift and drag characteristics to support initial configuration choices.</p>
+            </div>
+            <div class="p-4 rounded bg-slate-800/50 border border-slate-700/50">
+              <div class="text-sky-400 mb-3">⚖️</div>
+              <h3 class="font-semibold text-white mb-2">Stability</h3>
+              <p class="text-sm text-slate-400 leading-relaxed">Basic stability derivative estimation for longitudinal and lateral dynamics.</p>
+            </div>
+          </div>
+        </section>
+        <section class="space-y-6">
+          <div class="aspect-video bg-slate-800/50 border border-slate-700 rounded-lg flex items-center justify-center relative overflow-hidden group">
+            <div class="absolute inset-0 bg-grid-pattern opacity-20"></div>
+            <div class="text-center">
+              <div class="text-5xl mb-2 opacity-20">📊</div>
+              <span class="text-slate-500 font-mono text-sm">UI Screenshot: Sizing Dashboard</span>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- Right Col: Methodology & Development -->
+      <div class="space-y-8">
+        <section class="bg-blueprint-900 border border-sky-500/20 rounded-lg p-6 relative overflow-hidden">
+          <div class="absolute top-0 right-0 w-20 h-20 bg-sky-500/10 blur-3xl rounded-full pointer-events-none"></div>
+          <h3 class="text-sm font-bold text-sky-400 uppercase tracking-wider mb-4">Methodology</h3>
+          <div class="space-y-6 font-mono text-sm text-slate-300">
+            <div class="bg-black/20 p-3 rounded border-l-2 border-sky-500/50">
+              <p class="text-xs text-slate-500 mb-1">Concept</p>
+              <p>Rapid iteration of initial design parameters to converge on a viable aircraft configuration.</p>
+            </div>
+            <div class="bg-black/20 p-3 rounded border-l-2 border-sky-500/50">
+              <p class="text-xs text-slate-500 mb-1">Scope</p>
+              <p>Weight estimation, drag polar approximation, and mission profile analysis.</p>
+            </div>
+          </div>
+        </section>
+        <section class="bg-slate-900/50 border border-slate-800 rounded-lg p-6">
+          <h3 class="text-sm font-bold text-white uppercase tracking-wider mb-4">Development</h3>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-2 py-1 bg-slate-800 text-xs rounded text-slate-300">Web App</span>
+            <span class="px-2 py-1 bg-slate-800 text-xs rounded text-slate-300">Interactive UI</span>
+            <span class="px-2 py-1 bg-slate-800 text-xs rounded text-slate-300">Engineering Tools</span>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10 bg-blueprint-900 pt-10 pb-8 mt-auto">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <p class="text-slate-400 text-sm">&copy; 2026 Jaber Sultan Alzahrani.</p>
+      <p class="text-slate-500 text-xs mt-1">Aerospace Systems Engineer (BEng) | Coventry University</p>
+    </div>
+  </footer>
+</body>
+</html>
